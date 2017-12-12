@@ -29,6 +29,7 @@ create table cabang (
 
 CREATE TABLE paket_kursus(
  id_pk		CHAR(5) NOT NULL PRIMARY KEY,
+ cb_id char(15),
  lv_id		CHAR(5) NOT NULL,
  id_pengajar	CHAR(5) NOT NULL,
  pk_nama	VARCHAR(100),
@@ -37,24 +38,19 @@ CREATE TABLE paket_kursus(
  pk_tglmulai	DATE,
  pk_tglselesai	DATE,
  constraint fk_3 foreign key (id_pengajar) references pengajar(id_pengajar),
- --constraint fk_4 foreign key (cb_id) references cabang(cb_id),
+ constraint fk_4 foreign key (cb_id) references cabang(cb_id);
  constraint fk_5 foreign key (lv_id) references level_table(lv_id)
 );
 
 CREATE TABLE detil_kursus(
  no_siswa	CHAR(5) NOT NULL primary key,
  id_pk char(5) not null,
- nilai integer,
  status_tes	VARCHAR(10) not null,
+ nilai float,
  constraint fk_1 foreign key(no_siswa) references siswa(no_siswa),
  constraint fk_2 foreign key (id_pk) references paket_kursus(id_pk)
 );
 
-alter table paket_kursus
-add cb_id char(15);
-ALTER TABLE paket_kursus
-ADD constraint fk_4 foreign key (cb_id) references cabang(cb_id);
-alter table detil_kursus modify nilai float;
 
 INSERT INTO SISWA values ('S0001','Rizka','Jl. Pondok Maritim II no 3','081234789269','pelkenuk@gmail.com');
 INSERT INTO SISWA values ('S0002','Shafira','Jl. Dinoyo Sekolahan gg 1','081198000287','wagoonlife@gmail.com');
@@ -74,3 +70,12 @@ INSERT INTO pengajar VALUES ('P0005','Sulastrini','Jl. Siwalan Kerto 99','085649
 INSERT INTO level_table VALUES ('LV001','BEGINNER','Level ini diperuntukkan bagi pemula');
 INSERT INTO level_table VALUES ('LV002','INTERMEDIATE','Level ini telah melewati jenjang beginner dengan standar yang telah ditentukan');
 INSERT INTO level_table VALUES ('LV003','ADVANCE','Level ini telah melewati jenjang intermediate dengan standar yang telah ditentukan');
+
+INSERT INTO paket_kursus VALUES ('PK001','LV001','P0001','Class Basic','1000000',to_date('01-08-2017','dd-mm-yyyy'),to_date('01-09-2017','dd-mm-yyyy'));
+INSERT INTO paket_kursus VALUES ('PK002','LV001','P0005','Conversation Basic','1150000',to_date('01-08-2017','dd-mm-yyyy'),to_date('01-09-2017','dd-mm-yyyy'));
+INSERT INTO paket_kursus VALUES ('PK003','LV001','P0004','Writing Basic','1200000',to_date('01-08-2017','dd-mm-yyyy'),to_date('01-09-2017','dd-mm-yyyy'));
+INSERT INTO paket_kursus VALUES ('PK004','LV002','P0001','Class Mediate','2000000',to_date('11-08-2017','dd-mm-yyyy'),to_date('11-09-2017','dd-mm-yyyy'));
+INSERT INTO paket_kursus VALUES ('PK005','LV002','P0003','Conversation Mediate','2150000',to_date('11-08-2017','dd-mm-yyyy'),to_date('11-09-2017','dd-mm-yyyy'));
+INSERT INTO paket_kursus VALUES ('PK006','LV002','P0005','Writing Mediate','2200000',to_date('11-08-2017','dd-mm-yyyy'),to_date('11-09-2017','dd-mm-yyyy'));
+INSERT INTO paket_kursus VALUES ('PK007','LV003','P0002','Class Pro','2500000',to_date('21-08-2017','dd-mm-yyyy'),to_date('21-09-2017','dd-mm-yyyy'));
+INSERT INTO paket_kursus VALUES ('PK008','LV003','P0003','Conversation Pro','2800000',to_date('21-08-2017','dd-mm-yyyy'),to_date('21-09-2017','dd-mm-yyyy'));

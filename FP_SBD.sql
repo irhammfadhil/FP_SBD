@@ -49,10 +49,11 @@ CREATE TABLE detil_kursus(
  constraint fk_1 foreign key(no_siswa) references siswa(no_siswa),
  constraint fk_2 foreign key (id_pk) references paket_kursus(id_pk)
 );
-ALTER TABLE paket_kursus
-ADD constraint fk_4 foreign key (cb_id) references cabang(cb_id);
+
 alter table paket_kursus
 add cb_id char(15);
+ALTER TABLE paket_kursus
+ADD constraint fk_4 foreign key (cb_id) references cabang(cb_id);
 alter table detil_kursus modify nilai float;
 
 INSERT INTO SISWA values ('S0001','Rizka','Jl. Pondok Maritim II no 3','081234789269','pelkenuk@gmail.com');

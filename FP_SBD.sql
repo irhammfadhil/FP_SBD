@@ -58,3 +58,9 @@ alter table detil_kursus modify nilai float;
 
 INSERT INTO SISWA values ('S0001','Rizka','Jl. Pondok Maritim II no 3','081234789269','pelkenuk@gmail.com');
 INSERT INTO SISWA values ('S0002','Shafira','Jl. Dinoyo Sekolahan gg 1','081198000287','wagoonlife@gmail.com');
+INSERT INTO siswa VALUES ('S0003','Nafiar','Jl. Keputih Perintis 5','085253718192','nafiar_dedek@hotmail.com');
+INSERT INTO siswa VALUES ('S0004','Rafiar','Jl. Keputih Perintis 5','088265319210','rafiar_kakak@hotmail.com');
+INSERT INTO siswa VALUES ('S0005','Nafia','Jl. Raya Mulyosari 24','08562383719','naf_iya@yahoo.co.id');
+INSERT INTO siswa VALUES ('S0006','Cynthia','Jl. Ciputra 219','081673176883','cynd3@mhs.if.its.ac.id');
+INSERT INTO siswa VALUES ('S0007','Subhan','Jl. Manyar Selatan 21b','081515580376','sabhuncolek@yahoo.com');
+INSERT INTO siswa VALUES ('S0008','Brama','Jl. Ciputra 219','08289372989','bramski@mhs.if.its.ac.id');

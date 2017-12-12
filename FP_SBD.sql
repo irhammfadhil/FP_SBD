@@ -71,11 +71,28 @@ INSERT INTO level_table VALUES ('LV001','BEGINNER','Level ini diperuntukkan bagi
 INSERT INTO level_table VALUES ('LV002','INTERMEDIATE','Level ini telah melewati jenjang beginner dengan standar yang telah ditentukan');
 INSERT INTO level_table VALUES ('LV003','ADVANCE','Level ini telah melewati jenjang intermediate dengan standar yang telah ditentukan');
 
-INSERT INTO paket_kursus VALUES ('PK001','LV001','P0001','Class Basic','1000000',to_date('01-08-2017','dd-mm-yyyy'),to_date('01-09-2017','dd-mm-yyyy'));
-INSERT INTO paket_kursus VALUES ('PK002','LV001','P0005','Conversation Basic','1150000',to_date('01-08-2017','dd-mm-yyyy'),to_date('01-09-2017','dd-mm-yyyy'));
-INSERT INTO paket_kursus VALUES ('PK003','LV001','P0004','Writing Basic','1200000',to_date('01-08-2017','dd-mm-yyyy'),to_date('01-09-2017','dd-mm-yyyy'));
-INSERT INTO paket_kursus VALUES ('PK004','LV002','P0001','Class Mediate','2000000',to_date('11-08-2017','dd-mm-yyyy'),to_date('11-09-2017','dd-mm-yyyy'));
-INSERT INTO paket_kursus VALUES ('PK005','LV002','P0003','Conversation Mediate','2150000',to_date('11-08-2017','dd-mm-yyyy'),to_date('11-09-2017','dd-mm-yyyy'));
-INSERT INTO paket_kursus VALUES ('PK006','LV002','P0005','Writing Mediate','2200000',to_date('11-08-2017','dd-mm-yyyy'),to_date('11-09-2017','dd-mm-yyyy'));
-INSERT INTO paket_kursus VALUES ('PK007','LV003','P0002','Class Pro','2500000',to_date('21-08-2017','dd-mm-yyyy'),to_date('21-09-2017','dd-mm-yyyy'));
-INSERT INTO paket_kursus VALUES ('PK008','LV003','P0003','Conversation Pro','2800000',to_date('21-08-2017','dd-mm-yyyy'),to_date('21-09-2017','dd-mm-yyyy'));
+insert into Cabang values ('CB01','Kertajaya','Jl Kertajaya 355','kertajaya@efl.id');
+insert into Cabang values ('CB02','Rungkut','Jl Rungkut Industri 123','rungkut@efl.id');
+insert into Cabang values ('CB01','Manyar','Jl Manyar Kertaadi','manyar@efl.id');
+
+INSERT INTO paket_kursus VALUES ('PK001','CB01','LV001','P0001','Class Basic','1000000',to_date('01-08-2017','dd-mm-yyyy'),to_date('01-09-2017','dd-mm-yyyy'));
+INSERT INTO paket_kursus VALUES ('PK002','CB01','LV001','P0005','Conversation Basic','1150000',to_date('01-08-2017','dd-mm-yyyy'),to_date('01-09-2017','dd-mm-yyyy'));
+INSERT INTO paket_kursus VALUES ('PK003','CB01','LV001','P0004','Writing Basic','1200000',to_date('01-08-2017','dd-mm-yyyy'),to_date('01-09-2017','dd-mm-yyyy'));
+INSERT INTO paket_kursus VALUES ('PK004','CB02','LV002','P0001','Class Mediate','2000000',to_date('11-08-2017','dd-mm-yyyy'),to_date('11-09-2017','dd-mm-yyyy'));
+INSERT INTO paket_kursus VALUES ('PK005','CB02','LV002','P0003','Conversation Mediate','2150000',to_date('11-08-2017','dd-mm-yyyy'),to_date('11-09-2017','dd-mm-yyyy'));
+INSERT INTO paket_kursus VALUES ('PK006','CB02','LV002','P0005','Writing Mediate','2200000',to_date('11-08-2017','dd-mm-yyyy'),to_date('11-09-2017','dd-mm-yyyy'));
+INSERT INTO paket_kursus VALUES ('PK007','CB03','LV003','P0002','Class Pro','2500000',to_date('21-08-2017','dd-mm-yyyy'),to_date('21-09-2017','dd-mm-yyyy'));
+INSERT INTO paket_kursus VALUES ('PK008','CB03','LV003','P0003','Conversation Pro','2800000',to_date('21-08-2017','dd-mm-yyyy'),to_date('21-09-2017','dd-mm-yyyy'));
+
+INSERT INTO detil_kursus VALUES ('PK001','S0001','LULUS',80);
+INSERT INTO detil_kursus VALUES ('PK003','S0003','LULUS',80);
+INSERT INTO detil_kursus VALUES ('PK007','S0001','GAGAL',60);
+INSERT INTO detil_kursus VALUES ('PK005','S0006','LULUS',75);
+INSERT INTO detil_kursus VALUES ('PK002','S0008','LULUS',90);
+INSERT INTO detil_kursus VALUES ('PK001','S0002','LULUS',90);
+INSERT INTO detil_kursus VALUES ('PK004','S0001','LULUS',85);
+INSERT INTO detil_kursus VALUES ('PK006','S0004','GAGAL',55);
+INSERT INTO detil_kursus VALUES ('PK002','S0007','LULUS',80);
+INSERT INTO detil_kursus VALUES ('PK007','S0005','GAGAL',65);
+INSERT INTO detil_kursus VALUES ('PK001','S0003','LULUS',100);
+INSERT INTO detil_kursus VALUES ('PK004','S0002','LULUS',90);

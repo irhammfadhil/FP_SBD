@@ -96,3 +96,13 @@ INSERT INTO detil_kursus VALUES ('PK002','S0007','LULUS',80);
 INSERT INTO detil_kursus VALUES ('PK007','S0005','GAGAL',65);
 INSERT INTO detil_kursus VALUES ('PK001','S0003','LULUS',100);
 INSERT INTO detil_kursus VALUES ('PK004','S0002','LULUS',90);
+
+--Soal no 1--
+select s.no_siswa,s.s_nama,s.s_alamat,s.S_TELP
+from siswa s
+where s.s_nama='Shafira';
+
+--Soal no 2--
+select p.pk_tglmulai,c.CB_NAMA,l.lv_nama,j.P_NAMA,p.PK_NAMA
+from cabang c, paket_kursus p, pengajar j, detil_kursus d, LEVEL_TABLE l
+where d.no_siswa='S0002' and c.cb_id=p.cb_id and l.LV_ID=p.lv_id and j.ID_PENGAJAR=p.ID_PENGAJAR AND D.ID_PK=P.ID_PK;

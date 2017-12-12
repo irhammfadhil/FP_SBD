@@ -70,3 +70,7 @@ INSERT INTO pengajar VALUES ('P0002','Sugeng','Jl. Kedung doro 21','085739384826
 INSERT INTO pengajar VALUES ('P0003','Bondan Hartono','Jl. Achmad Yan 14','088975367131','bondan_ganz@yahoo.com');
 INSERT INTO pengajar VALUES ('P0004','Hariyoso','Jl. Banyu Urip 119','081519848921','har_manchester@ymail.com');
 INSERT INTO pengajar VALUES ('P0005','Sulastrini','Jl. Siwalan Kerto 99','085649829199','sulastri11@google.com');
+
+INSERT INTO level_table VALUES ('LV001','BEGINNER','Level ini diperuntukkan bagi pemula');
+INSERT INTO level_table VALUES ('LV002','INTERMEDIATE','Level ini telah melewati jenjang beginner dengan standar yang telah ditentukan');
+INSERT INTO level_table VALUES ('LV003','ADVANCE','Level ini telah melewati jenjang intermediate dengan standar yang telah ditentukan');

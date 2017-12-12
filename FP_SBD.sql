@@ -64,3 +64,9 @@ INSERT INTO siswa VALUES ('S0005','Nafia','Jl. Raya Mulyosari 24','08562383719',
 INSERT INTO siswa VALUES ('S0006','Cynthia','Jl. Ciputra 219','081673176883','cynd3@mhs.if.its.ac.id');
 INSERT INTO siswa VALUES ('S0007','Subhan','Jl. Manyar Selatan 21b','081515580376','sabhuncolek@yahoo.com');
 INSERT INTO siswa VALUES ('S0008','Brama','Jl. Ciputra 219','08289372989','bramski@mhs.if.its.ac.id');
+
+INSERT INTO pengajar VALUES ('P0001','Hari Sudirman','Perumdos blok U-9','081673176883','sudirman38@gmail.com');
+INSERT INTO pengajar VALUES ('P0002','Sugeng','Jl. Kedung doro 21','085739384826','sugenggeng@yahoo.com');
+INSERT INTO pengajar VALUES ('P0003','Bondan Hartono','Jl. Achmad Yan 14','088975367131','bondan_ganz@yahoo.com');
+INSERT INTO pengajar VALUES ('P0004','Hariyoso','Jl. Banyu Urip 119','081519848921','har_manchester@ymail.com');
+INSERT INTO pengajar VALUES ('P0005','Sulastrini','Jl. Siwalan Kerto 99','085649829199','sulastri11@google.com');
